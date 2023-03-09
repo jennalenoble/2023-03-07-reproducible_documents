@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+This is the penguins dataset, but here's a citation for the UCI heart disease @nahar2013association 
 
 ```{r}
 library(palmerpenguins)
@@ -47,6 +48,14 @@ penguins <- penguins %>%
 penguins %>%
   count(species, my_predict)
 ```
+
+## Results
+
+<!--
+TODO: this is a html comment
+-->
+Our data has `r nrow(penguins)` rows.
+
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
