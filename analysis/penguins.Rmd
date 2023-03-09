@@ -16,7 +16,7 @@ library(here)
 
 print(getwd())
 
-source("R/predict.R")
+source(here("R/predict.R"))
 
 kable(head(penguins))
 ```
