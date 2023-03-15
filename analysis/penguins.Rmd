@@ -18,9 +18,7 @@ library(knitr)
 library(here)
 
 print(getwd())
-
 source(here("R/predict.R"))
-
 kable(head(penguins))
 ```
 
@@ -34,6 +32,8 @@ library(tidyverse)
 #| message=FALSE, 
 #| warning=FALSE,
 #| fig.cap="Penguins by flipper length vs bill length. Vertical and Horizontal lines represent cutoffs from the function."
+#knitr::include_graphics(here("output/penguins_plain.png"))
+
 ggplot(penguins, aes(x = bill_length_mm, 
                      y = flipper_length_mm, 
                      color = species)) +
