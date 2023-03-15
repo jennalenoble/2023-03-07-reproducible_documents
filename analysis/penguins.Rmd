@@ -2,9 +2,10 @@
 title: "Penguin Analysis"
 author: "Jenna Le Noble"
 date: "2023-03-07"
-output: html_document
+output: bookdown::html_document2
 bibliography: citations.bib
 ---
+# Introduction
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -27,10 +28,12 @@ kable(head(penguins))
 library(tidyverse)
 ```
 
-```{r}
+# Methods
+
+```{r penguins-with-lines}
 #| message=FALSE, 
 #| warning=FALSE,
-#| fig.cap="Penguins by flipper length vs bill length."
+#| fig.cap="Penguins by flipper length vs bill length. Vertical and Horizontal lines represent cutoffs from the function."
 ggplot(penguins, aes(x = bill_length_mm, 
                      y = flipper_length_mm, 
                      color = species)) +
@@ -50,14 +53,15 @@ penguins %>%
   count(species, my_predict)
 ```
 
-## Results
+# Results
 
 <!--
 TODO: this is a html comment
 -->
 Our data has `r nrow(penguins)` rows.
+Figure \@ref(fig:penguins-with-lines) has shows where the function will cutoff for the classification. 
 
-## R Markdown
+# R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -76,3 +80,5 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# References
