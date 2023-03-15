@@ -3,6 +3,7 @@ title: "Penguin Analysis"
 author: "Jenna Le Noble"
 date: "2023-03-07"
 output: html_document
+bibliography: citations.bib
 ---
 
 ```{r setup, include=FALSE}
