@@ -2,7 +2,9 @@
 title: "Penguin Analysis"
 author: "Jenna Le Noble"
 date: "2023-03-07"
-output: bookdown::html_document2
+output: 
+  bookdown::html_document2:
+    default
 bibliography: citations.bib
 ---
 # Introduction
@@ -32,7 +34,7 @@ library(tidyverse)
 #| message=FALSE, 
 #| warning=FALSE,
 #| fig.cap="Penguins by flipper length vs bill length. Vertical and Horizontal lines represent cutoffs from the function."
-#knitr::include_graphics(here("output/penguins_plain.png"))
+knitr::include_graphics(here("output/penguins_plain.png"))
 
 ggplot(penguins, aes(x = bill_length_mm, 
                      y = flipper_length_mm, 

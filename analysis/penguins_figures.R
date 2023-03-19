@@ -1,7 +1,7 @@
 library(tidyverse)
 library(palmerpenguins)
 library(here)
-source(here("R/predict.R"))
+#source(here("R/predict.R"))
 
 penguins_plain <- ggplot(penguins, aes(x = bill_length_mm,
                      y = flipper_length_mm,
